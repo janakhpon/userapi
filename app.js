@@ -2,7 +2,7 @@
 const express = require("express");
       app = express(),
       bodyParser = require("body-parser"),
-      todoRouter = require('./routes/todos'),
+      userRouter = require('./routes/users'),
       port = process.env.PORT || 8080;
    
 
@@ -18,7 +18,7 @@ app.get("/", (req, res) => {
 
 
 //give access to router
-app.use('/api/todos', todoRouter);
+app.use('/api/users', userRouter);
 
 
 
