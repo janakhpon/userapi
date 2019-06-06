@@ -15,6 +15,15 @@ app.use(express.static("public"));
 app.set("views", path.join(__dirname, "views"));
 app.set('view engine', 'ejs');
 app.use(ejsLayouts);
+//Allow XHttp request 
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header(
+    "Access-Control-Allow-Headers",
+    "Origin, X-Requested-With, Content-Type, Accept"
+  );
+  next();
+});
 
 //responding route
 app.get("/", (req, res) => {
