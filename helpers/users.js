@@ -2,10 +2,10 @@
 const db = require("../models");
 
 //GET route to list all 
-exports.gettodos = function(req, res) {
-  db.Todo.find()
-    .then(function(todos) {
-      res.json(todos);
+exports.getusers = function(req, res) {
+  db.Userapi.find()
+    .then(function(users) {
+      res.json(users);
     })
     .catch(function(err) {
       res.send(err);
@@ -13,10 +13,10 @@ exports.gettodos = function(req, res) {
 }
 
 //POST rout to create
-exports.posttodos = function(req, res) {
-  db.Todo.create(req.body)
-    .then(function(newTodo) {
-      res.status(201).json(newTodo);
+exports.postusers = function(req, res) {
+  db.Userapi.create(req.body)
+    .then(function(newUser) {
+      res.status(201).json(newUser);
     })
     .catch(function(err) {
       res.send(err);
@@ -26,7 +26,7 @@ exports.posttodos = function(req, res) {
 
 //GET specific id
 exports.getid = function(req, res) {
-  db.Todo.findById(req.params.todoId)
+  db.Userapi.findById(req.params.userId)
     .then(function(foundId) {
       res.json(foundId);
     })
@@ -38,9 +38,9 @@ exports.getid = function(req, res) {
 
 //PUT route to update
 exports.putid = function(req, res) {
-  db.Todo.findOneAndUpdate({ _id: req.params.todoId }, req.body, { new: true })
-    .then(function(todo) {
-      res.json(todo);
+  db.Userapi.findOneAndUpdate({ _id: req.params.userId }, req.body, { new: true })
+    .then(function(User) {
+      res.json(User);
     })
     .catch(function(err) {
       res.send(err);
@@ -51,14 +51,17 @@ exports.putid = function(req, res) {
 
 //DELETE route for specific id
 exports.deleteid = function(req, res) {
-  db.Todo.remove({ _id: req.params.todoId })
-    .then(function(todo) {
+  db.Userapi.deleteOne({ _id: req.params.userId })
+    .then(function(User) {
       res.json("Deleted!");
     })
     .catch(function(err) {
       res.send(err);
     });
 };
+
+
+
 
 
 //exports to be accessed

@@ -13,4 +13,4 @@ mongoose.Promise = Promise;
 
 
 //Call todo file to assign
-module.exports.Todo = require('./todo');
+module.exports.Userapi = require('./user');
