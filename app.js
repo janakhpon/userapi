@@ -1,6 +1,7 @@
 //Assigning values for API
 const express = require("express");
-      app = express(),
+app = express(),
+      path = require("path"),
       ejsLayouts = require("express-ejs-layouts"),
       bodyParser = require("body-parser"),
       userRouter = require('./routes/users'),
