@@ -1,5 +1,5 @@
 # userapi
- `USER_API` is the backend api for `react-redux-form` and `fullstack_form` and allow to be requested without difficulty.react-redux-form is a design implementation for fullstack_form and serves as a requester. react-redux-form is built to be on `CLIENT` side only but also comes up with full functional app. Fullstack_form is a simple demonstration of MERN stack and its additional CRUD and REST service and fullstack_form is a project where `SERVER` and `CLIENT` are built together. Here is a github example demo for [herokudeploy](https://intense-inlet-82778.herokuapp.com/)
+ `USER_API` is the backend api for `react-redux-form` and `fullstack_form` and allow to be requested without difficulty.react-redux-form is a design implementation for fullstack_form and serves as a requester. react-redux-form is built to be on `CLIENT` side only but also comes up with full functional app. Fullstack_form is a simple demonstration of MERN stack and its additional CRUD and REST service and fullstack_form is a project where `SERVER` and `CLIENT` are built together. Here is a github example demo for [HEROKU_DEPLOYMENT](https://intense-inlet-82778.herokuapp.com/)
 
 
 
